@@ -37,11 +37,9 @@ def rotate_screen(source):
     global orientation
     if orientation == "right":
         indicator.set_label("Vertical", "Horizontal")
-        source.set_label("Rotar pantalla (Vertical)")
         direction = "normal"
     elif orientation == "normal":
         indicator.set_label("Horizontal", "Horizontal")
-        source.set_label("Rotar pantalla (Horizontal)")
         direction ="right"
     call(["xrandr", "-o", direction])
     orientation = direction
