@@ -1,4 +1,4 @@
-# ScreenRotator
+# ScreenRotator- modificación para las 2en1 Exomate TW7
 Small applet for rotating the screen on Unity Desktop
 
 ![Updated Icon](https://raw.githubusercontent.com/frecel/ScreenRotator/master/Screenshot%20from%202016-07-05%2013-03-54.png)
