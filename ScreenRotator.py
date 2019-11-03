@@ -7,7 +7,7 @@ from gi.repository import Gtk
 from gi.repository import AppIndicator3 as AppIndicator
 
 APPINDICATOR_ID = "screenrotator"
-orientation = "normal"
+orientation = "left"
 
 def main():
     global indicator
