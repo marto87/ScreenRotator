@@ -7,7 +7,7 @@ from gi.repository import Gtk
 from gi.repository import AppIndicator3 as AppIndicator
 
 APPINDICATOR_ID = "screenrotator"
-orientation = "left"
+orientation = "right"
 
 def main():
     global indicator
@@ -35,19 +35,19 @@ def build_menu():
 
 def rotate_screen(source):
     global orientation
-    if orientation == "normal":
+    if orientation == "right":
         indicator.set_label("Vertical", "Horizontal")
         source.set_label("Rotar pantalla (Vertical)")
-        direction = "left"
-    elif orientation == "left":
+        direction = "normal"
+    elif orientation == "normal":
         indicator.set_label("Horizontal", "Horizontal")
         source.set_label("Rotar pantalla (Horizontal)")
-        direction ="normal"
+        direction ="right"
     call(["xrandr", "-o", direction])
     orientation = direction
 
 if __name__ == "__main__":
-    #make sure the screen is in normal orientation when the script starts
+    #make sure the screen is in "right" orientation when the script starts
     call(["xrandr", "-o", orientation])
     #keyboard interrupt handler
     signal.signal(signal.SIGINT, signal.SIG_DFL)
